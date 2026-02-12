@@ -23,15 +23,27 @@ h1{
 }
 button{
   padding:10px 25px;
-  margin:10px;
+  margin:20px;
   border-radius:20px;
   border:none;
   cursor:pointer;
+  background:#ff4d6d;
+  color:white;
 }
-.yes{background:#ff4d6d;color:white;}
-.no{background:#ccc;}
-#photo{display:none;margin-top:20px;}
-img{width:250px;border-radius:15px;}
+#photo{
+  display:none;
+  margin-top:20px;
+}
+img{
+  width:250px;
+  border-radius:15px;
+}
+#valentine{
+  margin-top:15px;
+  font-size:22px;
+  color:#ff3366;
+  font-weight:bold;
+}
 </style>
 </head>
 
@@ -40,25 +52,23 @@ img{width:250px;border-radius:15px;}
 <h1>💖 Surprise For You 💖</h1>
 
 <div class="box">
-<h2 id="question">Hi… Naku konni questions adagali 😊</h2>
+<h2 id="question">Are u ready for surprise </h2>
 
-<div id="buttons">
-<button class="yes" onclick="next()">Yes</button>
-<button class="no" onclick="next()">No</button>
-</div>
+<button onclick="next()">Next</button>
 
 <div id="photo">
-<h2>Idi na favourite ❤️</h2>
 <img src="photo.jpg">
+<div id="valentine">Happy Valentine's Day Ammulu 💕</div>
 </div>
 </div>
 
 <script>
 let questions = [
-"Ready aa? 😌",
-"Naa gurinchi konchem special feeling unda? 💕",
-"Nenu nee life lo important aa? ❤️",
-"Last question... Nannu miss avuthava? 🥺"
+"Hi....nenu niku oka vishayam cheppali....!",
+"Naku oka ammai antey chala istam 💕",
+"tanu Ela untundi telusukovalani unda....? ",
+"Tanu nilabaditey na gundeku daggaraga untundi....tana kallu  appudappudu na kosame vetukutunnay anipistundi....tana navvu samudramlo mutyamla swachamga untundi....tanato parichayam konni rojuley ina na manasuki baga daggara endi ....",
+"Tanu evvaro chudalani undaa....?"
 ];
 
 let count = 0;
@@ -69,7 +79,7 @@ document.getElementById("question").innerHTML = questions[count];
 count++;
 }else{
 document.getElementById("question").style.display="none";
-document.getElementById("buttons").style.display="none";
+document.querySelector("button").style.display="none";
 document.getElementById("photo").style.display="block";
 }
 }
